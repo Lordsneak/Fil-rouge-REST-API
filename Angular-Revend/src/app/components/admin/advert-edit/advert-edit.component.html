@@ -1,0 +1,45 @@
+<h3>Edit Advert</h3>
+<br>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Title Advert</label>
+        <br>
+        <input type="text" class="form-control" id="titleAdvert" required [(ngModel)]="advert.titleAdvert" name="titleAdvert">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Description</label>
+        <br>
+        <input type="text" class="form-control" id="descriptionAdvert" required [(ngModel)]="advert.descriptionAdvert" name="descriptionAdvert">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Price</label>
+        <br>
+        <input type="number" class="form-control" id="priceAdvert" required [(ngModel)]="advert.priceAdvert" name="priceAdvert">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Image Advert</label>
+        <br>
+        <input type="text" class="form-control" id="imageAdvert" required [(ngModel)]="advert.imageAdvert" name="imageAdvert">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">City Id</label>
+        <br>
+        <input type="text" class="form-control" id="cityId" required [(ngModel)]="advert.cityId" name="cityId">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="name">Category Id</label>
+        <br>
+        <input type="text" class="form-control" id="categoryId" required [(ngModel)]="advert.categoryId" name="categoryId">
+      </div>
+      <br>
+      
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<app-admin-navbar></app-admin-navbar>

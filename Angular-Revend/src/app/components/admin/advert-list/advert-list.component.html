@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Advert List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>City ID</th>
+            <th>User ID</th>
+            <th>Category ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let advert of adverts | async">
+            <td>{{advert.titleAdvert}}</td>
+            <td>{{advert.descriptionAdvert}}</td>
+            <td>{{advert.priceAdvert}}</td>
+            <td>{{advert.imageAdvert}}</td>
+            <td>{{advert.cityId}}</td>
+            <td>{{advert.userId}}</td>
+            <td>{{advert.categoryId}}</td>
+            <td>
+                <button (click)="updateAdvert(advert.advertId)" class="btn btn-info">Update</button>
+                <button (click)="deleteAdvert(advert.advertId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <app-admin-navbar></app-admin-navbar>

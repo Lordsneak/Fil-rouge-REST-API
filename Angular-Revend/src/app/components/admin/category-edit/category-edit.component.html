@@ -1,0 +1,22 @@
+<h3>Edit Category</h3>
+<br>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Title Category</label>
+
+      <input type="text" class="form-control" id="nameCategory" required [(ngModel)]="category.nameCategory" name="nameCategory">
+
+      <label>Logo Category</label>
+
+      <input type="text" class="form-control" id="logoCategory" required [(ngModel)]="category.logoCategory" name="logoCategory">
+
+      <label>Description Category</label>
+
+      <input type="text" class="form-control" id="descriptionCategory" required [(ngModel)]="category.descriptionCategory" name="descriptionCategory">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<app-admin-navbar></app-admin-navbar>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Panel</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles-admin.css"/>
+  
+
+  
+</head>
+<body>
+  
+
+  <main>
+    <div class="page-header">
+        <div>
+            <input type="checkbox" name="" id="sidebar-toggle">
+<div class="sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-flex">
+            <img src="/assets/img/logo.png" width="30px" alt="" srcset="">
+            <div class="brand-icons">
+                <span class="la la-bell"></span>
+                <span class="la la-user-circle"></span>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-main">
+        <div class="sidebar-user">
+            <img src="/assets/img/2.jpg" alt="" srcset="">
+            <div>
+                <h3>{{userInfos.firstName}} {{userInfos.lastName}}</h3>
+                <span>{{userInfos.email}}</span>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <div class="menu-head">
+                <span>Dashboard Admin</span>
+            </div>
+            <ul>
+                <li>
+                    <a href="admin/user">
+                        <span>
+                        <i class="las la-list-ul"></i>
+                          List Users
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin/user/create">
+                        <span>
+                        <i class="las la-plus"></i>
+                         Ajoute User
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin/advert">
+                        <span>
+                        <i class="las la-list-ul"></i>
+                          List Announces
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin/advert/create">
+                        <span>
+                        <i class="las la-plus"></i>
+                         Ajoute Announce
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin/category">
+                        <span>
+                            <i class="las la-list-ul"></i>
+                            List Categorys
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin/category/create">
+                        <span>
+                            <i class="las la-plus"></i>
+                            Ajoute Category
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin/city">
+                        <span>
+                            <i class="las la-list-ul"></i>
+                           List Citys
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin/city/create">
+                        <span>
+                            <i class="las la-plus"></i>
+                            Ajoute City
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+
+        
+
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <header>
+
+        <div class="menu-toggle">
+            <label for="sidebar-toggle">
+                <span><i class="las la-bars"></i></span>
+            </label>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li>
+                    
+                    <a href=""><button class="btn btn-primary-outline" (click)="logout()"><i class="las la-sign-in-alt"></i>Logout</button> </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+</div>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>

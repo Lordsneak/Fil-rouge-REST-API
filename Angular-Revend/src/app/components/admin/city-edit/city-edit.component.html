@@ -1,0 +1,14 @@
+<h3>Edit City</h3>
+<br>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name City</label>
+      <br>
+      <input type="text" class="form-control" id="nameCity" required [(ngModel)]="city.nameCity" name="nameCity">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<app-admin-navbar></app-admin-navbar>

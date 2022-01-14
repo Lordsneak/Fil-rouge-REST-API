@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>User Dashboard</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles-admin.css"/>
+  
+
+  
+</head>
+<body>
+  
+
+  <main>
+    <div class="page-header">
+        <div>
+            <input type="checkbox" name="" id="sidebar-toggle">
+<div class="sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-flex">
+            <img src="" width="30px" alt="" srcset="">
+            <div class="brand-icons">
+                <span class="la la-bell"></span>
+                <span class="la la-user-circle"></span>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-main">
+        <div class="sidebar-user">
+            <img src="/assets/img/2.jpg" alt="" srcset="">
+            <div>
+                <h3>{{userInfos.firstName}} {{userInfos.lastName}}</h3>
+                <span>{{userInfos.email}}</span>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <div class="menu-head">
+                <span>Dashboard User</span>
+            </div>
+            <ul>
+                <li>
+                    <a href="user">
+                        <span>
+                        <i class="las la-list-ul"></i>
+                          Add Advert
+                        </span>
+                    </a>
+                </li>
+                <li>
+
+
+                
+            </ul>
+
+        
+
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <header>
+
+        <div class="menu-toggle">
+            <label for="sidebar-toggle">
+                <span><i class="las la-bars"></i></span>
+            </label>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li>
+                    
+                    <a href=""><button class="btn btn-primary-outline" (click)="logout()"><i class="las la-sign-in-alt"></i>Logout</button> </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+</div>
+        </div>
+    </div>
+
+    
+    <h3>Create Advert</h3>
+    <div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" id="titleAdvert" required [(ngModel)]="advert.titleAdvert" name="titleAdvert">
+          <label for="name">Description</label>
+          <input type="text" class="form-control" id="descriptionAdvert" required [(ngModel)]="advert.descriptionAdvert" name="descriptionAdvert">
+          <label for="name">Price</label>
+          <input type="number" class="form-control" id="priceAdvert" required [(ngModel)]="advert.priceAdvert" name="priceAdvert">
+          <label for="name">Image</label>
+          <input type="text" class="form-control" id="imageAdvert" required [(ngModel)]="advert.imageAdvert" name="imageAdvert">
+          <label for="name">City</label>
+    
+          <select class="form-select" name="cityId" id="cityId">
+            <option *ngFor="let city of citys | async" value="{{city.cityId}}">{{city.nameCity}}</option>
+          </select>
+          <input type="hidden" class="form-control" value="{{userInfos.id}}" id="userId" name="userId">
+          <label for="name">CATEGORY</label>
+          <select class="form-select" name="categoryId" id="categoryId">
+            <option *ngFor="let categorie of categories | async" value="{{categorie.categoryId}}">{{categorie.nameCategory}}</option>
+          </select>
+        </div>
+    
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+    </div>
+
+</main>
+</body>
+</html>
